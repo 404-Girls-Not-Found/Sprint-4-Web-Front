@@ -11,6 +11,7 @@ import {
   GraduationCap,
   Headphones,
   Home,
+  LogOut,
   RefreshCw,
   Search,
   Sparkles,
@@ -27,7 +28,7 @@ const CORES_MATERIA = {
 
 const pagina = "grid min-h-screen place-items-center bg-[#182424] bg-[radial-gradient(circle_at_top,#334646,transparent_45%)] text-[#f5f8f8]";
 const tela = "relative min-h-screen w-[min(100%,510px)] bg-[#071010]";
-const topo = "sticky top-0 z-10 grid min-h-20 grid-cols-[48px_1fr_48px] items-center gap-[14px] border-b border-[#203030] bg-[rgba(7,16,16,0.96)] px-4 py-3 backdrop-blur-[12px] max-[420px]:gap-[9px]";
+const topo = "sticky top-0 z-10 grid min-h-20 items-center gap-[14px] border-b border-[#203030] bg-[rgba(7,16,16,0.96)] px-4 py-3 backdrop-blur-[12px] max-[420px]:gap-[9px]";
 const botaoIcone = "grid size-12 place-items-center rounded-2xl border border-[#304242] bg-[#101c1c]";
 const marca = "flex min-w-0 items-center gap-[11px] max-[420px]:gap-2 [&>div]:grid [&>div]:min-w-0 [&>div]:gap-[3px] [&_strong]:overflow-hidden [&_strong]:text-ellipsis [&_strong]:whitespace-nowrap [&_strong]:text-[17px] [&_small]:overflow-hidden [&_small]:text-ellipsis [&_small]:whitespace-nowrap [&_small]:text-[9px] [&_small]:uppercase [&_small]:tracking-[1px] [&_small]:text-[#7f9494]";
 const conteudo = "px-4 pt-8 pb-[104px]";
@@ -46,6 +47,7 @@ function PrototipoAplicativo({
   carregandoDica,
   erroDica,
   onNovaDica,
+  onSair,
   onVoltar,
   onAbrirCamera,
 }) {
@@ -113,13 +115,16 @@ function PrototipoAplicativo({
   return (
     <main className={pagina}>
       <section className={tela}>
-        <header className={topo}>
+        <header className={`${topo} grid-cols-[48px_1fr_auto]`}>
           <button className={botaoIcone} type="button" onClick={onVoltar} aria-label="Voltar"><ArrowLeft size={23} /></button>
           <div className={marca}>
             <span className="grid size-[43px] shrink-0 place-items-center rounded-[13px] bg-[#062a30] text-[#43dff3] max-[420px]:hidden"><GraduationCap size={22} /></span>
             <div><strong>Modo Aula</strong><small>{curso || "APLICATIVO DE ESTUDOS"}</small></div>
           </div>
-          <button className={botaoIcone} type="button" onClick={() => setBuscaAberta(!buscaAberta)} aria-label="Pesquisar matéria"><Search size={23} /></button>
+          <div className="flex gap-2">
+            <button className={botaoIcone} type="button" onClick={() => setBuscaAberta(!buscaAberta)} aria-label="Pesquisar matéria"><Search size={23} /></button>
+            <button className={botaoIcone} type="button" onClick={onSair} aria-label="Sair do aplicativo"><LogOut size={21} /></button>
+          </div>
         </header>
 
         <div className={conteudo}>

@@ -4,8 +4,6 @@ import {
   CheckCircle2,
   GraduationCap,
   LayoutGrid,
-  LogIn,
-  LogOut,
   Sparkles,
 } from "lucide-react";
 
@@ -14,13 +12,7 @@ const selo = "rounded-[17px] bg-[#50d0e7] px-[10px] py-[5px] text-[8px] font-ext
 const descricao = "mt-[10px] text-[11px] leading-[1.65] text-texto-secundario";
 const botao = "mt-auto flex min-h-[47px] w-full items-center justify-center gap-2 rounded-[12px] bg-[#4fd0e7] text-[11px] font-extrabold text-[#061011] transition duration-150 hover:-translate-y-px hover:bg-[#77e6f8]";
 
-function EscolherPrototipo({
-  autenticado,
-  onEntrar,
-  onSair,
-  onAbrirCamera,
-  onAbrirAplicativo,
-}) {
+function EscolherPrototipo({ onAbrirCamera, onAbrirAplicativo }) {
   return (
     <main className="grid min-h-screen place-items-center bg-[#071011] bg-[radial-gradient(circle_at_50%_0,rgba(19,143,165,0.24),transparent_38%)] px-5 py-[42px] text-texto-principal max-[650px]:place-items-start_center max-[650px]:px-[17px] max-[650px]:pt-[25px] max-[650px]:pb-[35px]">
       <section className="w-[min(100%,860px)]">
@@ -33,14 +25,6 @@ function EscolherPrototipo({
             <small className="text-[10px] text-texto-secundario">Experiência Interativa</small>
           </div>
 
-          <button
-            className="ml-auto flex min-h-9 items-center gap-2 rounded-[10px] border border-[#304142] bg-[#111b1c] px-3 text-[10px] font-bold text-[#c5cecf] transition hover:border-[#4fd0e7] hover:text-white"
-            type="button"
-            onClick={autenticado ? onSair : onEntrar}
-          >
-            {autenticado ? <LogOut size={15} /> : <LogIn size={15} />}
-            {autenticado ? "Sair" : "Entrar"}
-          </button>
         </header>
 
         <div className="mt-[50px] text-center max-[650px]:mt-[38px] max-[650px]:text-left">

@@ -10,7 +10,7 @@ Evolução do projeto desenvolvido na Sprint 3 pela equipe **404 Girls Not Found
 - Modos Foto, Documento e Áudio;
 - Aplicativo de estudos com materiais organizados por matéria;
 - Dicas de estudo consumidas de uma API mockada;
-- Autenticação demonstrativa;
+- Autenticação demonstrativa exclusiva para o protótipo do aplicativo;
 - Rotas públicas e privadas;
 - Layout responsivo para Desktop, Tablet e Mobile.
 
@@ -56,7 +56,7 @@ O Vite exibirá o endereço local no terminal, normalmente:
 http://localhost:5173
 ```
 
-Abra esse endereço no navegador. Para testar as áreas privadas, use as credenciais descritas na seção “Usuário e senha para teste”.
+Abra esse endereço no navegador. A câmera é pública e funciona como uma câmera nativa; para testar o aplicativo privado, use as credenciais descritas na seção “Usuário e senha para teste”.
 
 ### Outros comandos
 
@@ -89,18 +89,18 @@ Na Vercel, o mesmo endpoint será disponibilizado no domínio do deploy.
 | Rota | Acesso | Descrição |
 | --- | --- | --- |
 | `/` | Pública | Escolha entre o protótipo da câmera e o aplicativo |
-| `/login` | Pública | Autenticação demonstrativa |
-| `/camera` | Privada | Câmera e configuração do Modo Aula |
+| `/login` | Pública | Autenticação demonstrativa do aplicativo |
+| `/camera` | Pública | Câmera e configuração do Modo Aula, sem login |
 | `/aplicativo` | Privada | Aplicativo de estudos e consumo da API mockada |
 
-As rotas privadas redirecionam automaticamente para `/login` quando não existe uma sessão válida no navegador.
+Apenas a rota do aplicativo redireciona para `/login` quando não existe uma sessão válida no navegador. A câmera permanece pública por representar a câmera nativa do celular.
 
 ## Usuário e senha para teste
 
 A autenticação é apenas demonstrativa e utiliza `localStorage`; não deve ser usada como autenticação de produção.
 
 ```text
-E-mail: professor@fiap.com.br
+E-mail: email@sprint.com.br
 Senha: Sprint4@2026
 ```
 
@@ -108,12 +108,13 @@ Senha: Sprint4@2026
 
 1. Execute `npm install` e `npm run dev`;
 2. Abra `http://localhost:5173`;
-3. Escolha o protótipo da câmera ou o aplicativo;
-4. Entre com o usuário de teste;
-5. Na câmera, abra “Modo Aula” e configure curso, matérias e horários;
-6. Finalize a configuração e teste Foto, Documento e Áudio;
-7. Volte à tela inicial e abra o aplicativo;
-8. Confira as matérias persistidas e use o botão da seção “Dica rápida de estudo” para consumir a API mockada.
+3. Abra o protótipo da câmera, que não exige login;
+4. Abra “Modo Aula” e configure curso, matérias e horários;
+5. Finalize a configuração e teste Foto, Documento e Áudio;
+6. Volte à tela inicial e abra o aplicativo;
+7. Entre com o usuário de teste solicitado somente pelo aplicativo;
+8. Confira as matérias persistidas e use o botão da seção “Dica rápida de estudo” para consumir a API mockada;
+9. Use o botão de sair no cabeçalho do aplicativo para encerrar a sessão.
 
 > A câmera e o microfone funcionam apenas em `localhost` ou em conexão HTTPS. O navegador solicitará permissão ao abrir a rota da câmera. Caso a permissão seja negada, as demais funcionalidades continuam disponíveis.
 

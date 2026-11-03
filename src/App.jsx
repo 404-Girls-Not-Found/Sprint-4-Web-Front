@@ -14,9 +14,9 @@ function App() {
     <Routes>
       <Route path="/" element={<EscolherPage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/camera" element={<CameraPage modoAula={modoAula} />} />
 
       <Route element={<ProtectedRoute />}>
-        <Route path="/camera" element={<CameraPage modoAula={modoAula} />} />
         <Route
           path="/aplicativo"
           element={<AplicativoPage curso={modoAula.curso} aulas={modoAula.aulas} />}

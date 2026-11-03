@@ -12,7 +12,7 @@ export default function LoginPage() {
   const localizacao = useLocation();
   const navegar = useNavigate();
 
-  const destino = localizacao.state?.origem?.pathname || "/";
+  const destino = localizacao.state?.origem?.pathname || "/aplicativo";
 
   if (autenticado) {
     return <Navigate to={destino} replace />;
@@ -46,9 +46,9 @@ export default function LoginPage() {
         </span>
 
         <p className="text-[10px] font-bold uppercase tracking-[1.4px] text-[#55d5ec]">Área protegida</p>
-        <h1 className="mt-2 text-[30px] leading-[1.15]">Acesse o Modo Aula</h1>
+        <h1 className="mt-2 text-[30px] leading-[1.15]">Acesse o aplicativo</h1>
         <p className="mt-3 text-[12px] leading-[1.6] text-texto-secundario">
-          Entre com o usuário de demonstração para acessar a câmera e o aplicativo de estudos.
+          Entre com o usuário de demonstração para acessar o protótipo do aplicativo de estudos.
         </p>
 
         <form className="mt-8 grid gap-4" onSubmit={enviarFormulario}>
@@ -59,7 +59,7 @@ export default function LoginPage() {
               type="email"
               value={email}
               onChange={(evento) => setEmail(evento.target.value)}
-              placeholder="professor@fiap.com.br"
+              placeholder="email@sprint.com.br"
               autoComplete="username"
               required
             />

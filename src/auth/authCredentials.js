@@ -1,5 +1,5 @@
 export const USUARIO_TESTE = {
-  email: "professor@fiap.com.br",
+  email: "email@sprint.com.br",
   senha: "Sprint4@2026",
-  nome: "Professor FIAP",
+  nome: "Usuário Sprint",
 };
