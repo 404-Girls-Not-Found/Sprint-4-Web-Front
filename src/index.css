@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Open Sans", sans-serif;
+  --color-fundo: #070c0c;
+  --color-fundo-hover: #202929;
+  --color-fundo-botao: #141b1b;
+  --color-fundo-input: #111818;
+  --color-fundo-progresso: #1d2626;
+  --color-azul-geral: #138fa5;
+  --color-azul-escuro: #072b31;
+  --color-azul-transparente: rgba(19, 143, 165, 0.12);
+  --color-azul-foco: rgba(19, 143, 165, 0.18);
+  --color-azul-sombra: rgba(19, 143, 165, 0.45);
+  --color-texto-principal: #ffffff;
+  --color-texto-secundario: #98a4a4;
+  --color-texto-suave: #6f7a7a;
+  --color-texto-topo: #8e9b9b;
+  --color-texto-etapa: #9ba6ab;
+  --color-texto-label: #d9dddd;
+  --color-texto-placeholder: #667171;
+  --color-borda-principal: #354141;
+  --color-borda-botao: #344040;
+  --color-borda-divisoria: #202929;
+  --color-amarelo-camera: #d6b900;
+  --color-vermelho-gravacao: #ff3b30;
+}
+
+@layer base {
+  :root {
+    font-family: var(--font-sans);
+    color: #ffffff;
+    background-color: #1c2a2a;
+    font-synthesis: none;
+    line-height: normal;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  input,
+  select,
+  textarea {
+    font-family: Arial, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 700;
+  }
+
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(1);
+  }
+}
+
+@keyframes abrir-modal {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes abrir-configuracao {
+  from { opacity: 0; transform: translateX(18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes escanear-documento {
+  from { top: 0; }
+  to { top: calc(100% - 2px); }
+}
+
+@keyframes piscar-gravacao {
+  50% { opacity: 0.25; }
+}

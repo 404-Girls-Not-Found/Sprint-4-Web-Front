@@ -1,0 +1,32 @@
+export const configuracao = {
+  tela: "absolute inset-0 min-h-full overflow-y-auto bg-fundo bg-[radial-gradient(circle_at_50%_10%,rgba(0,100,123,0.3),transparent_35%)] text-texto-principal animate-[abrir-configuracao_220ms_ease-out]",
+  topo: "sticky top-0 z-[2] grid min-h-[78px] grid-cols-[42px_1fr_50px] items-center gap-[10px] border-b border-borda-divisoria bg-fundo px-5 pt-[18px] pb-[14px]",
+  topoFixo: "grid min-h-[78px] grid-cols-[42px_1fr_50px] items-center gap-[10px] border-b border-borda-divisoria px-5 pt-[18px] pb-[14px]",
+  voltar: "grid size-[39px] place-items-center rounded-[12px] border border-borda-botao bg-fundo-botao text-texto-principal transition-[background-color,border-color,transform] duration-150 hover:border-azul-geral hover:bg-fundo-hover active:scale-[0.96]",
+  titulo: "flex flex-col gap-0.5",
+  rotuloTopo: "text-[9px] uppercase tracking-[1px] text-texto-topo",
+  nomeTopo: "text-[14px] text-texto-principal",
+  etapa: "text-right text-[10px] text-texto-etapa",
+  progresso: "h-[3px] bg-fundo-progresso",
+  barra: "block h-full bg-azul-geral shadow-[0_0_10px_var(--color-azul-sombra)]",
+  icone: "grid place-items-center border border-azul-geral bg-azul-transparente text-azul-geral",
+  categoria: "mb-2 text-[11px] font-bold uppercase tracking-[1.4px] text-texto-principal",
+  descricao: "mt-3 text-[12px] leading-[1.6] text-texto-secundario",
+  primario: "flex min-h-[52px] w-full items-center justify-center gap-[9px] rounded-[13px] border border-azul-geral bg-azul-escuro text-[13px] font-bold text-texto-principal transition-[background-color,box-shadow,transform] duration-150 hover:bg-azul-geral hover:shadow-[0_5px_18px_var(--color-azul-sombra)] active:scale-[0.98]",
+};
+
+export const camera = {
+  pagina: "grid min-h-screen place-items-center bg-[#182424] bg-[radial-gradient(circle_at_top,#334646,transparent_45%)] min-[500px]:p-5",
+  corpo: "relative flex h-screen min-h-screen w-[min(100%,430px)] flex-col overflow-hidden bg-black min-[500px]:h-[min(900px,calc(100vh-40px))] min-[500px]:min-h-[820px] min-[500px]:rounded-[28px] min-[500px]:shadow-[0_25px_70px_rgba(0,0,0,0.45)]",
+  topo: "flex min-h-[88px] items-center justify-between bg-black px-[18px] pt-6 pb-[14px]",
+  botaoIcone: "grid size-[34px] place-items-center rounded-full bg-transparent hover:bg-[#1d1d1d]",
+  visualizacao: "relative min-h-[400px] flex-1 overflow-hidden bg-[radial-gradient(circle_at_52%_70%,rgba(255,255,255,0.35),transparent_9%),repeating-linear-gradient(2deg,rgba(255,255,255,0.05)_0,rgba(255,255,255,0.05)_2px,rgba(0,0,0,0.04)_3px,rgba(0,0,0,0.04)_6px),linear-gradient(145deg,#d5d1c9,#99958f)] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-[150px] after:bg-[linear-gradient(transparent,rgba(0,0,0,0.35))] after:content-['']",
+  controles: "relative min-h-[238px] bg-black",
+  modos: "flex h-[55px] items-center gap-[55px] overflow-hidden px-5",
+  modo: "shrink-0 bg-transparent text-[12px] font-semibold text-[#bdbdbd]",
+  acoes: "grid h-[100px] grid-cols-[1fr_1.4fr_1fr] items-center justify-items-center",
+  botaoRedondo: "grid size-[47px] place-items-center rounded-full bg-[#1e1e1e]",
+  capturar: "grid size-[76px] place-items-center rounded-full border-4 border-white bg-transparent p-[5px]",
+  expandir: "grid h-[25px] w-full place-items-center bg-transparent",
+  navegacao: "flex h-[58px] items-center justify-between px-[65px] text-[#777]",
+};

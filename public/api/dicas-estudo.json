@@ -1,0 +1,34 @@
+{
+  "dicas": [
+    {
+      "id": 1,
+      "titulo": "Revisão espaçada",
+      "texto": "Revise o conteúdo em intervalos crescentes para fortalecer a memória de longo prazo.",
+      "categoria": "Memorização"
+    },
+    {
+      "id": 2,
+      "titulo": "Recordação ativa",
+      "texto": "Feche o material e tente explicar o assunto com suas próprias palavras antes de conferir.",
+      "categoria": "Aprendizagem"
+    },
+    {
+      "id": 3,
+      "titulo": "Blocos de foco",
+      "texto": "Estude por 25 minutos sem interrupções e faça uma pausa curta antes do próximo bloco.",
+      "categoria": "Concentração"
+    },
+    {
+      "id": 4,
+      "titulo": "Resumo visual",
+      "texto": "Transforme conceitos complexos em mapas mentais, diagramas ou listas de relações.",
+      "categoria": "Organização"
+    },
+    {
+      "id": 5,
+      "titulo": "Prática intercalada",
+      "texto": "Alterne matérias relacionadas durante a revisão para treinar a escolha da estratégia correta.",
+      "categoria": "Prática"
+    }
+  ]
+}
