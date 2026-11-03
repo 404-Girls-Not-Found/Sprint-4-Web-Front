@@ -135,7 +135,7 @@ https://github.com/404-Girls-Not-Found/Sprint-4-Web-Front
 
 ## Deploy na Vercel
 
-**Pendente:** a equipe realizará o deploy na Vercel após o envio ao GitHub. Antes da entrega acadêmica, substitua este aviso pelo link público do deploy.
+https://sprint-4-web-front-lime.vercel.app
 
 ## Integrantes
 
